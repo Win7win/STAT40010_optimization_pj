@@ -1,0 +1,10 @@
+[13:03:10] INFO - ==== Sparse Ridge Project Runner ====
+[13:03:10] INFO - Args: {'data': None, 'train': '/remote-home/yqwu/lecture_projects/optimization/final/try_3/data/e2006/E2006.train.bz2', 'test': '/remote-home/yqwu/lecture_projects/optimization/final/try_3/data/e2006/E2006.test.bz2', 'format': 'svmlight', 'test_size': 0.2, 'seed': 0, 'methods': ['greedy'], 'k_list': [20], 'm_cand': 15000, 'lambda2': 0.01, 'lambda1': 0.0005, 'iht_max_iter': 200, 'iht_step': 'auto', 'iht_debias': True, 'iht_stop_patience': 5, 'iht_min_iter': 10, 'fista_max_iter': 300, 'tol': 1e-05, 'colnorm': 'l2', 'fista_match_k': False, 'lambda1_min': 1e-06, 'lambda1_max': 1.0, 'lambda1_grid_n': 20, 'val_size': 0.2, 'tune_iter': 0, 'outdir': 'out_cand_15000', 'loglevel': 'INFO'}
+[13:04:09] INFO - Loaded train: X=(16087, 150360), nnz=19971015; test: X=(3308, 150360), nnz=4559533
+[13:04:10] INFO - Applied colnorm=l2
+[13:04:10] INFO - [Greedy] k=20, m_cand=15000, lambda2=0.01. Screening done in 0.04s
+[13:04:33] INFO - [Greedy] done. |S|=20, time=23.31s
+[13:04:33] INFO - [Result] {'mse_tr': 0.1483450745097723, 'r2_tr': 0.6289294370508194, 'mse_te': 0.15410049759359004, 'r2_te': 0.4669452466554449, 'nnz': 20, 'mse_te_const': 0.3827151786142501, 'method': 'greedy_schur_refit', 'k': 20, 'time_sec': 23.386563777923584, 'lambda2': 0.01, 'm_cand': 15000, 'colnorm': 'l2'}
+[13:04:33] INFO - Saved: out_cand_15000/results.jsonl
+[13:04:33] INFO - Saved: out_cand_15000/results.csv
+[13:04:33] INFO - ==== Done ====

@@ -1,0 +1,10 @@
+cat > .gitignore << 'EOF'
+# dataset (do not commit)
+data/e2006/
+*.bz2
+
+# python
+__pycache__/
+*.pyc
+.DS_Store
+EOF
