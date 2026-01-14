@@ -1,0 +1,37 @@
+[08:34:45] INFO - ==== Sparse Ridge Project Runner ====
+[08:34:45] INFO - Args: {'data': None, 'train': '/remote-home/yqwu/lecture_projects/optimization/final/try_3/data/e2006/E2006.train.bz2', 'test': '/remote-home/yqwu/lecture_projects/optimization/final/try_3/data/e2006/E2006.test.bz2', 'format': 'svmlight', 'test_size': 0.2, 'seed': 0, 'methods': ['greedy', 'iht', 'fista'], 'k_list': [10, 20, 50], 'm_cand': 5000, 'lambda2': 0.01, 'lambda1': 0.0005, 'iht_max_iter': 200, 'iht_step': 'auto', 'iht_debias': True, 'iht_stop_patience': 5, 'iht_min_iter': 20, 'fista_max_iter': 300, 'tol': 1e-05, 'colnorm': 'l2', 'fista_match_k': True, 'lambda1_min': 1e-06, 'lambda1_max': 1.0, 'lambda1_grid_n': 20, 'val_size': 0.2, 'tune_iter': 0, 'outdir': 'out_sparse_ridge', 'loglevel': 'INFO'}
+[08:35:49] INFO - Loaded train: X=(16087, 150360), nnz=19971015; test: X=(3308, 150360), nnz=4559533
+[08:35:49] INFO - Applied colnorm=l2
+[08:35:49] INFO - [Greedy] k=10, m_cand=5000, lambda2=0.01. Screening done in 0.04s
+[08:35:57] INFO - [Greedy] done. |S|=10, time=8.07s
+[08:35:58] INFO - [Result] {'mse_tr': 0.1510590558203581, 'r2_tr': 0.6221406806591383, 'mse_te': 0.15498726421232284, 'r2_te': 0.4638777993168294, 'nnz': 10, 'mse_te_const': 0.3827151786142501, 'method': 'greedy_schur_refit', 'k': 10, 'time_sec': 8.227216958999634, 'lambda2': 0.01, 'm_cand': 5000, 'colnorm': 'l2'}
+[08:36:01] INFO - Estimated ||X||_2^2 ≈ 1.083090e+07
+[08:36:01] INFO - [IHT] k=10, lambda2=0.01, L≈6.733e+02, eta≈1.485e-03, debias=True
+[08:36:06] INFO - [IHT] done. nnz=10, iters=20
+[08:36:06] INFO - [Result] {'mse_tr': 0.30288660732296946, 'r2_tr': 0.24235904521590457, 'mse_te': 0.28945319880515374, 'r2_te': -0.001258308073702974, 'nnz': 10, 'mse_te_const': 0.3827151786142501, 'method': 'iht_auto_debias', 'k': 10, 'time_sec': 7.991902828216553, 'lambda2': 0.01, 'colnorm': 'l2', 'iters': 20}
+[08:36:06] INFO - [Tune] target nnz≈10, grid=20 lambdas, val_size=0.2, tune_iter=300
+[08:51:49] INFO - [Tune] best lambda1=1.129e-01, nnz=14, dist=4, mse_val=0.3636
+[08:52:16] INFO - [Result] {'mse_tr': 0.35653960693007114, 'r2_tr': 0.10815136198872821, 'mse_te': 0.34591761116362574, 'r2_te': -0.19657645352103148, 'nnz': 13, 'mse_te_const': 0.3827151786142501, 'method': 'fista_l1_matchk', 'k': 10, 'time_sec': 27.782899379730225, 'lambda1': 0.11288378916846883, 'lambda2': 0.01, 'colnorm': 'l2', 'iters': 116, 'tune_dist': 4, 'tune_mse_val': 0.3636091291229687, 'tune_nnz': 14}
+[08:52:16] INFO - [Greedy] k=20, m_cand=5000, lambda2=0.01. Screening done in 0.04s
+[08:52:35] INFO - [Greedy] done. |S|=20, time=18.75s
+[08:52:35] INFO - [Result] {'mse_tr': 0.1485722592219957, 'r2_tr': 0.6283611569152182, 'mse_te': 0.15505563279471468, 'r2_te': 0.46364130301478945, 'nnz': 20, 'mse_te_const': 0.3827151786142501, 'method': 'greedy_schur_refit', 'k': 20, 'time_sec': 18.807682752609253, 'lambda2': 0.01, 'm_cand': 5000, 'colnorm': 'l2'}
+[08:52:40] INFO - Estimated ||X||_2^2 ≈ 1.083090e+07
+[08:52:40] INFO - [IHT] k=20, lambda2=0.01, L≈6.733e+02, eta≈1.485e-03, debias=True
+[08:52:44] INFO - [IHT] done. nnz=20, iters=20
+[08:52:45] INFO - [Result] {'mse_tr': 0.279196044156395, 'r2_tr': 0.30161865083378303, 'mse_te': 0.2743381506209991, 'r2_te': 0.05102671635785205, 'nnz': 20, 'mse_te_const': 0.3827151786142501, 'method': 'iht_auto_debias', 'k': 20, 'time_sec': 9.266579389572144, 'lambda2': 0.01, 'colnorm': 'l2', 'iters': 20}
+[08:52:45] INFO - [Tune] target nnz≈20, grid=20 lambdas, val_size=0.2, tune_iter=300
+[09:08:18] INFO - [Tune] best lambda1=1.129e-01, nnz=14, dist=6, mse_val=0.3636
+[09:08:46] INFO - [Result] {'mse_tr': 0.35653960693007114, 'r2_tr': 0.10815136198872821, 'mse_te': 0.34591761116362574, 'r2_te': -0.19657645352103148, 'nnz': 13, 'mse_te_const': 0.3827151786142501, 'method': 'fista_l1_matchk', 'k': 20, 'time_sec': 27.837462425231934, 'lambda1': 0.11288378916846883, 'lambda2': 0.01, 'colnorm': 'l2', 'iters': 116, 'tune_dist': 6, 'tune_mse_val': 0.3636091291229687, 'tune_nnz': 14}
+[09:08:46] INFO - [Greedy] k=50, m_cand=5000, lambda2=0.01. Screening done in 0.04s
+[09:09:45] INFO - [Greedy] done. |S|=50, time=58.89s
+[09:09:45] INFO - [Result] {'mse_tr': 0.1348055827711356, 'r2_tr': 0.6627971393530669, 'mse_te': 0.1556745224848962, 'r2_te': 0.46150047870663413, 'nnz': 50, 'mse_te_const': 0.3827151786142501, 'method': 'greedy_schur_refit', 'k': 50, 'time_sec': 58.95199537277222, 'lambda2': 0.01, 'm_cand': 5000, 'colnorm': 'l2'}
+[09:09:48] INFO - Estimated ||X||_2^2 ≈ 1.083090e+07
+[09:09:48] INFO - [IHT] k=50, lambda2=0.01, L≈6.733e+02, eta≈1.485e-03, debias=True
+[09:09:53] INFO - [IHT] done. nnz=50, iters=20
+[09:09:53] INFO - [Result] {'mse_tr': 0.2492730213022135, 'r2_tr': 0.37646813924676625, 'mse_te': 0.24991145119935404, 'r2_te': 0.13552201934880226, 'nnz': 50, 'mse_te_const': 0.3827151786142501, 'method': 'iht_auto_debias', 'k': 50, 'time_sec': 8.765764951705933, 'lambda2': 0.01, 'colnorm': 'l2', 'iters': 20}
+[09:09:53] INFO - [Tune] target nnz≈50, grid=20 lambdas, val_size=0.2, tune_iter=300
+[09:25:22] INFO - [Tune] best lambda1=5.456e-02, nnz=48, dist=2, mse_val=0.2729
+[09:26:27] INFO - [Result] {'mse_tr': 0.2618750784436963, 'r2_tr': 0.34494533706906594, 'mse_te': 0.2580971717591054, 'r2_te': 0.10720648940526234, 'nnz': 50, 'mse_te_const': 0.3827151786142501, 'method': 'fista_l1_matchk', 'k': 50, 'time_sec': 65.0678219795227, 'lambda1': 0.05455594781168514, 'lambda2': 0.01, 'colnorm': 'l2', 'iters': 300, 'tune_dist': 2, 'tune_mse_val': 0.27294086828191466, 'tune_nnz': 48}
+[09:26:28] INFO - Saved: out_sparse_ridge/results.jsonl
+[09:26:28] INFO - Saved: out_sparse_ridge/results.csv
+[09:26:28] INFO - ==== Done ====

@@ -1,0 +1,28 @@
+[09:37:31] INFO - ==== Sparse Ridge Project Runner ====
+[09:37:31] INFO - Args: {'data': None, 'train': '/remote-home/yqwu/lecture_projects/optimization/final/try_3/data/e2006/E2006.train.bz2', 'test': '/remote-home/yqwu/lecture_projects/optimization/final/try_3/data/e2006/E2006.test.bz2', 'format': 'svmlight', 'test_size': 0.2, 'seed': 0, 'methods': ['greedy', 'iht'], 'k_list': [10, 20, 50], 'm_cand': 5000, 'lambda2': 0.01, 'lambda1': 0.0005, 'iht_max_iter': 200, 'iht_step': 'niht', 'iht_debias': True, 'iht_stop_patience': 5, 'iht_min_iter': 20, 'fista_max_iter': 300, 'tol': 1e-05, 'colnorm': 'l2', 'fista_match_k': False, 'lambda1_min': 1e-06, 'lambda1_max': 1.0, 'lambda1_grid_n': 20, 'val_size': 0.2, 'tune_iter': 0, 'outdir': 'out_sparse_ridge', 'loglevel': 'INFO'}
+[09:38:18] INFO - Loaded train: X=(16087, 150360), nnz=19971015; test: X=(3308, 150360), nnz=4559533
+[09:38:19] INFO - Applied colnorm=l2
+[09:38:19] INFO - [Greedy] k=10, m_cand=5000, lambda2=0.01. Screening done in 0.04s
+[09:38:27] INFO - [Greedy] done. |S|=10, time=8.19s
+[09:38:27] INFO - [Result] {'mse_tr': 0.1510590558203581, 'r2_tr': 0.6221406806591383, 'mse_te': 0.15498726421232284, 'r2_te': 0.4638777993168294, 'nnz': 10, 'mse_te_const': 0.3827151786142501, 'method': 'greedy_schur_refit', 'k': 10, 'time_sec': 8.327245712280273, 'lambda2': 0.01, 'm_cand': 5000, 'colnorm': 'l2'}
+[09:38:31] INFO - Estimated ||X||_2^2 ≈ 1.083090e+07
+[09:38:31] INFO - [IHT] k=10, lambda2=0.01, L≈6.733e+02, eta≈1.485e-03, debias=True
+[09:38:38] INFO - [IHT] done. nnz=10, iters=20
+[09:38:38] INFO - [Result] {'mse_tr': 0.30288660732296946, 'r2_tr': 0.24235904521590457, 'mse_te': 0.28945319880515374, 'r2_te': -0.001258308073702974, 'nnz': 10, 'mse_te_const': 0.3827151786142501, 'method': 'iht_niht_debias', 'k': 10, 'time_sec': 11.172131061553955, 'lambda2': 0.01, 'colnorm': 'l2', 'iters': 20}
+[09:38:38] INFO - [Greedy] k=20, m_cand=5000, lambda2=0.01. Screening done in 0.05s
+[09:38:56] INFO - [Greedy] done. |S|=20, time=17.80s
+[09:38:56] INFO - [Result] {'mse_tr': 0.1485722592219957, 'r2_tr': 0.6283611569152182, 'mse_te': 0.15505563279471468, 'r2_te': 0.46364130301478945, 'nnz': 20, 'mse_te_const': 0.3827151786142501, 'method': 'greedy_schur_refit', 'k': 20, 'time_sec': 17.948150873184204, 'lambda2': 0.01, 'm_cand': 5000, 'colnorm': 'l2'}
+[09:39:00] INFO - Estimated ||X||_2^2 ≈ 1.083090e+07
+[09:39:00] INFO - [IHT] k=20, lambda2=0.01, L≈6.733e+02, eta≈1.485e-03, debias=True
+[09:39:07] INFO - [IHT] done. nnz=20, iters=20
+[09:39:07] INFO - [Result] {'mse_tr': 0.279196044156395, 'r2_tr': 0.30161865083378303, 'mse_te': 0.2743381506209991, 'r2_te': 0.05102671635785205, 'nnz': 20, 'mse_te_const': 0.3827151786142501, 'method': 'iht_niht_debias', 'k': 20, 'time_sec': 10.712743759155273, 'lambda2': 0.01, 'colnorm': 'l2', 'iters': 20}
+[09:39:07] INFO - [Greedy] k=50, m_cand=5000, lambda2=0.01. Screening done in 0.05s
+[09:40:04] INFO - [Greedy] done. |S|=50, time=57.15s
+[09:40:04] INFO - [Result] {'mse_tr': 0.1348055827711356, 'r2_tr': 0.6627971393530669, 'mse_te': 0.1556745224848962, 'r2_te': 0.46150047870663413, 'nnz': 50, 'mse_te_const': 0.3827151786142501, 'method': 'greedy_schur_refit', 'k': 50, 'time_sec': 57.29930877685547, 'lambda2': 0.01, 'm_cand': 5000, 'colnorm': 'l2'}
+[09:40:08] INFO - Estimated ||X||_2^2 ≈ 1.083090e+07
+[09:40:08] INFO - [IHT] k=50, lambda2=0.01, L≈6.733e+02, eta≈1.485e-03, debias=True
+[09:40:15] INFO - [IHT] done. nnz=50, iters=20
+[09:40:15] INFO - [Result] {'mse_tr': 0.2492730213022135, 'r2_tr': 0.37646813924676625, 'mse_te': 0.24991145119935404, 'r2_te': 0.13552201934880226, 'nnz': 50, 'mse_te_const': 0.3827151786142501, 'method': 'iht_niht_debias', 'k': 50, 'time_sec': 11.137989044189453, 'lambda2': 0.01, 'colnorm': 'l2', 'iters': 20}
+[09:40:16] INFO - Saved: out_sparse_ridge/results.jsonl
+[09:40:17] INFO - Saved: out_sparse_ridge/results.csv
+[09:40:17] INFO - ==== Done ====
